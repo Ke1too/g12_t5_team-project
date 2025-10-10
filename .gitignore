@@ -1,0 +1,29 @@
+# Unity generated files
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/Assets/AssetStoreTools/
+/Assets/ExternalDependencyManager/
+/Assets/StreamingAssets/
+
+# Visual Studio / Rider / IDE files
+.vs/
+*.csproj
+*.unityproj
+*.sln
+*.user
+*.userprefs
+
+# Secret Firebase/Google Files (CRITICAL for security)
+google-services.json
+GoogleService-Info.plist
+
+# Logs and user data
+*.log
+*.meta
+
+# Unity Package Cache Files
+/Library/
+/team project/Library/
