@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1918092599900024199}
-  - component: {fileID: 3890567124224446112}
+  - component: {fileID: 2630749787523815703}
   m_Layer: 0
   m_Name: GameFlowManager
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3890567124224446112
+--- !u!114 &2630749787523815703
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,7 +41,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6003078826723396081}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e671a5eb6148a734d993f6c65bb06636, type: 3}
+  m_Script: {fileID: 11500000, guid: 2196d7ee34a9fd5419bbae1c0052c5e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameFlowManager
   clears: 0
