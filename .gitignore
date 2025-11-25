@@ -22,7 +22,7 @@ GoogleService-Info.plist
 
 # Logs and user data
 *.log
-*.meta
+
 
 # Unity Package Cache Files
 /Library/
