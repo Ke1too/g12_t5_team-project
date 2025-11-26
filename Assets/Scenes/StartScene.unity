@@ -304,7 +304,7 @@ Animator:
   m_GameObject: {fileID: 84067233}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8de8adfe00c9d0044b5dd1d15a71eb63, type: 2}
+  m_Controller: {fileID: 9100000, guid: ac10adb32249ab6418ee1fc430880b2d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -336,7 +336,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6602477064106851175, guid: 222ef91407455b64dac42ba633bdfc0a, type: 3}
+  m_Sprite: {fileID: 6602477064106851175, guid: 961041e1cd588e0479d5f0f7ef33efaa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -499,8 +499,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press ENTER to Start
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8e411c0b577c72e448702dfd6f368c87, type: 2}
-  m_sharedMaterial: {fileID: -2805536145026686418, guid: 8e411c0b577c72e448702dfd6f368c87, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fcdc1c39a775c104385b00a6deca84d6, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: fcdc1c39a775c104385b00a6deca84d6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -715,7 +715,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 649369150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17160f5df31ce3d4b8a7ffb1415a474a, type: 3}
+  m_Script: {fileID: 11500000, guid: e0d1b23306a7d5048879dde8d1a6db9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartButton
   startText: {fileID: 243691374}
@@ -747,7 +747,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 748510467}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be5153d8023f4a547b39a0f28acdc902, type: 3}
+  m_Script: {fileID: 11500000, guid: 33ce4a004df8ac04aa827dfe865a3a7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TitleSequence
   yuruttoAnimator: {fileID: 84067235}
@@ -824,7 +824,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3495110376698640015, guid: 98a895c5030dc034892c7bcf4e2be4e6, type: 3}
+  m_Sprite: {fileID: 3495110376698640015, guid: c8262d10693ff7d49b471cab3fe5e5d4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -890,7 +890,7 @@ Animator:
   m_GameObject: {fileID: 1576692938}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 279970cae56bee44b81baffea2b95526, type: 2}
+  m_Controller: {fileID: 9100000, guid: ce100ed45c41d23488b2dd4b979f9bd5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -922,7 +922,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6612755787767484246, guid: faba636511116f049b884431e40b056f, type: 3}
+  m_Sprite: {fileID: -6612755787767484246, guid: d9a4286f1557b5341b77b70af2b7d73a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1012,7 +1012,7 @@ SpriteRenderer:
   m_Size: {x: 15.36, y: 10.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1745228994

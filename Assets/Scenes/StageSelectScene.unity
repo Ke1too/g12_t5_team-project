@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -9212075255833196500, guid: 835f5d472c7fbfd4abfe409675d842fc, type: 3}
+  m_Sprite: {fileID: -9212075255833196500, guid: 3bdedbb346afbaf4992f4c1f781bed70, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -241,10 +241,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 372494333}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd0c29869e12544d91ee6d32412c206, type: 3}
+  m_Script: {fileID: 11500000, guid: 600e9cd63145c2b4c80317b5509605c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FloatingArrow
-  floatSpeed: 1
+  floatSpeed: 2
   floatHeight: 10
 --- !u!114 &372494336
 MonoBehaviour:
@@ -266,7 +266,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 662626765207364831, guid: 6d725dbff38bac1409b170c674423aba, type: 3}
+  m_Sprite: {fileID: 662626765207364831, guid: 6f7c4de326f255d4596d6d5154751175, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -341,7 +341,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5690153249277930605, guid: 6d725dbff38bac1409b170c674423aba, type: 3}
+  m_Sprite: {fileID: 5690153249277930605, guid: 6f7c4de326f255d4596d6d5154751175, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -416,7 +416,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5690153249277930605, guid: 6d725dbff38bac1409b170c674423aba, type: 3}
+  m_Sprite: {fileID: 5690153249277930605, guid: 6f7c4de326f255d4596d6d5154751175, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -460,7 +460,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 599102487}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 265cddc804300544eb30350ead376003, type: 3}
+  m_Script: {fileID: 11500000, guid: f8fb76fbedb72dc4585be0ea2b4d11e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageSelector
   arrow: {fileID: 1549487347}
@@ -552,7 +552,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5690153249277930605, guid: 6d725dbff38bac1409b170c674423aba, type: 3}
+  m_Sprite: {fileID: 5690153249277930605, guid: 6f7c4de326f255d4596d6d5154751175, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -896,7 +896,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5690153249277930605, guid: 6d725dbff38bac1409b170c674423aba, type: 3}
+  m_Sprite: {fileID: 5690153249277930605, guid: 6f7c4de326f255d4596d6d5154751175, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -971,7 +971,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5690153249277930605, guid: 6d725dbff38bac1409b170c674423aba, type: 3}
+  m_Sprite: {fileID: 5690153249277930605, guid: 6f7c4de326f255d4596d6d5154751175, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1082,7 +1082,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5690153249277930605, guid: 6d725dbff38bac1409b170c674423aba, type: 3}
+  m_Sprite: {fileID: 5690153249277930605, guid: 6f7c4de326f255d4596d6d5154751175, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1158,7 +1158,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3315015322784667171, guid: 6af1de95d1f4aa347aeac09560c2dbb2, type: 3}
+  m_Sprite: {fileID: -3315015322784667171, guid: 6667eefa77a1ef34a91df24553f0c49e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1312,7 +1312,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5690153249277930605, guid: 6d725dbff38bac1409b170c674423aba, type: 3}
+  m_Sprite: {fileID: 5690153249277930605, guid: 6f7c4de326f255d4596d6d5154751175, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
