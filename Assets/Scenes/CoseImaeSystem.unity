@@ -448,7 +448,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 687948817944932803, guid: 3e03e14e65c1a814dbefd4a5d63e4585, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -569,7 +569,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 687948817944932803, guid: 3e03e14e65c1a814dbefd4a5d63e4585, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1098,7 +1098,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 687948817944932803, guid: 3e03e14e65c1a814dbefd4a5d63e4585, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1238,12 +1238,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::system
   cornerImages:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  winningSprite: {fileID: 0}
-  losingSprites: []
+  - {fileID: 1217649076}
+  - {fileID: 204773015}
+  - {fileID: 445264425}
+  - {fileID: 700497668}
+  winningSprite: {fileID: 687948817944932803, guid: 3e03e14e65c1a814dbefd4a5d63e4585, type: 3}
+  losingSprites:
+  - {fileID: -16623885497310151, guid: a7adbe221b55aeb4ebfce0bf181073b0, type: 3}
+  - {fileID: -16623885497310151, guid: a7adbe221b55aeb4ebfce0bf181073b0, type: 3}
+  - {fileID: -16623885497310151, guid: a7adbe221b55aeb4ebfce0bf181073b0, type: 3}
   timer: {fileID: 0}
 --- !u!114 &1051801755
 MonoBehaviour:
@@ -1478,7 +1481,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1217649076}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1051801753}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1217649076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1499,7 +1514,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -16623885497310151, guid: a7adbe221b55aeb4ebfce0bf181073b0, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
