@@ -12,8 +12,8 @@ public class PlayerMove : MonoBehaviour
         if (!canMove) return;
         float h = 0f;
 
-        if (Keyboard.current.aKey.isPressed) h = -1;
-        if (Keyboard.current.dKey.isPressed) h = 1;
+        if (Keyboard.current.leftArrowKey.isPressed) h = -1;
+        if (Keyboard.current.rightArrowKey.isPressed) h = 1;
 
         transform.Translate(h * Time.deltaTime * 5f, 0, 0);
     }
