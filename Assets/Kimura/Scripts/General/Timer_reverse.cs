@@ -1,55 +1,77 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 public class Timer_reverse : MonoBehaviour
 {
-    [SerializeField]
-    public TMP_Text TimerText;
-    public TMP_Text GameClearText;
-    public TMP_Text GameOverText;
-    float limitTime = 3; // ��������
+    [Header("UI")]
+    [SerializeField] TMP_Text timerText;
+    [SerializeField] TMP_Text gameClearText;
+    [SerializeField] TMP_Text gameOverText;
+
+    [Header("Timer")]
+    [SerializeField] float limitTime = 3f;
+
     bool isGameOver = false;
     bool isRunning = false;
+    bool isFinished = false; // ★ 多重呼び出し防止
 
-    // Start is called before the first frame update
     void Start()
     {
-        GameClearText.gameObject.SetActive(false);
-        GameOverText.gameObject.SetActive(false);
+        if (gameClearText != null) gameClearText.gameObject.SetActive(false);
+        if (gameOverText != null) gameOverText.gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (isGameOver) return;
-        if (!isRunning) return;
+        if (!isRunning || isFinished) return;
+
         limitTime -= Time.deltaTime;
 
-        if (limitTime < 0)
+        if (limitTime <= 0f)
         {
-            limitTime = 0;
+            limitTime = 0f;
             GameClear();
         }
 
-        TimerText.text = limitTime.ToString("F0");
+        if (timerText != null)
+            timerText.text = limitTime.ToString("F0");
     }
+
+    // -------- ゲーム開始 --------
     public void GameStart()
     {
         isRunning = true;
     }
 
+    // -------- ゲームオーバー --------
     public void GameOver()
     {
-        isGameOver = true;
-        GameOverText.gameObject.SetActive(true);
+        if (isFinished) return;
+        isFinished = true;
+        isRunning = false;
+
+        if (gameOverText != null)
+            gameOverText.gameObject.SetActive(true);
+
+        // ★ 共通フローへ報告
+        GameFlowState.hasLastResult = true;
+        GameFlowState.lastWin = false;
+        GameFlowManager.Instance.ReportFail();
     }
 
-    public void GameClear()
+    // -------- ゲームクリア --------
+    void GameClear()
     {
-        isGameOver = true;
-        GameClearText.gameObject.SetActive(true);
+        if (isFinished) return;
+        isFinished = true;
+        isRunning = false;
+
+        if (gameClearText != null)
+            gameClearText.gameObject.SetActive(true);
+
+        // ★ 共通フローへ報告
+        GameFlowState.hasLastResult = true;
+        GameFlowState.lastWin = true;
+        GameFlowManager.Instance.ReportClear();
     }
 }

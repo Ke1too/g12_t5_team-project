@@ -63,7 +63,7 @@ public class StageSelector : MonoBehaviour
             Debug.Log($"選択されたステージ: {sceneName}");
 
             // 🔹 九州が選ばれているときだけ ReadyScene に遷移
-            if (sceneName == "九州")
+            if (sceneName == "東北")
             {
                 SceneManager.LoadScene("ReadyScene");
             }

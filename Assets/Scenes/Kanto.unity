@@ -1967,9 +1967,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6912a38110290c243bf0fca56d6199bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer_reverse
-  TimerText: {fileID: 410310422}
-  GameClearText: {fileID: 511267315}
-  GameOverText: {fileID: 639909755}
+  timerText: {fileID: 410310422}
+  gameClearText: {fileID: 511267315}
+  gameOverText: {fileID: 639909755}
+  limitTime: 3
 --- !u!4 &1889206199
 Transform:
   m_ObjectHideFlags: 0
