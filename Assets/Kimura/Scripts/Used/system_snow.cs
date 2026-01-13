@@ -9,7 +9,7 @@ public class System_snow : MonoBehaviour
     [Header("タイマー（時間切れ判定用）")]
     public Timer timer;
 
-    int maxCount = 15;
+    int maxCount = 10;
     int currentCount = 0;
     bool isFinished = false;
 
