@@ -29,20 +29,19 @@ public class GameManagerKanaQuiz : MonoBehaviour
     public Color warningTimerColor = Color.red;
 
     [Header("サウンド")]
-    public AudioSource bgmSource;     // BGM用AudioSource（Loop ON推奨）
-    public AudioSource seSource;      // SE用AudioSource
-    public AudioClip bgmClip;         // BGM
-    public AudioClip correctSE;       // 正解SE
-    public AudioClip wrongSE;         // 不正解SE
-    public AudioClip buttonSE;        // ボタン押したSE
+    public AudioSource bgmSource;
+    public AudioSource seSource;
+    public AudioClip bgmClip;
+    public AudioClip correctSE;
+    public AudioClip wrongSE;
+    public AudioClip buttonSE;
 
     private int score = 0;
     private int currentQuestionIndex;
     private int charIndex = 0;
-
     private float timeLeft;
 
-    // 5秒以下の「デカ文字 → 戻る」
+    // タイマー演出
     private int lastShownSecond = -1;
     private Vector3 timerDefaultScale;
     private Vector3 timerBigScale;
@@ -64,13 +63,14 @@ public class GameManagerKanaQuiz : MonoBehaviour
 
     public List<KanjiQuestion> questions = new List<KanjiQuestion>();
 
-
+    // =======================
+    // Start（初期化のみ）
+    // =======================
     void Start()
     {
         if (dimPanel != null) dimPanel.SetActive(false);
         if (answerPopup != null) answerPopup.SetActive(false);
 
-        // タイマーの基準スケール
         if (timerText != null)
             timerDefaultScale = timerText.rectTransform.localScale;
         else
@@ -78,9 +78,17 @@ public class GameManagerKanaQuiz : MonoBehaviour
 
         timerBigScale = timerDefaultScale * 1.6f;
 
-        // BGM再生
-        PlayBGM();
+        DisableButtons();                 // ← カウントダウン中は押せない
+        Invoke(nameof(GameStart), 0.1f);  // ← ReadyScene後、即スタート
+    }
 
+    // =======================
+    // ゲーム開始（ここが合図）
+    // =======================
+    public void GameStart()
+    {
+        EnableButtons();
+        PlayBGM();
         NextQuestion();
     }
 
@@ -100,26 +108,27 @@ public class GameManagerKanaQuiz : MonoBehaviour
 
         TimerTextUpdate();
 
-        // スケールアニメ
         if (isScaling && timerText != null)
         {
             scaleAnimTime += Time.deltaTime;
             float t = Mathf.Clamp01(scaleAnimTime / scaleAnimDuration);
-            timerText.rectTransform.localScale = Vector3.Lerp(scaleStart, timerDefaultScale, t);
+            timerText.rectTransform.localScale =
+                Vector3.Lerp(scaleStart, timerDefaultScale, t);
 
             if (t >= 1f) isScaling = false;
         }
     }
 
-    // -------- サウンド --------
-
+    // =======================
+    // サウンド
+    // =======================
     void PlayBGM()
     {
         if (bgmSource == null || bgmClip == null) return;
 
         bgmSource.clip = bgmClip;
         bgmSource.loop = true;
-        if (!bgmSource.isPlaying) bgmSource.Play();
+        bgmSource.Play();
     }
 
     void PlaySE(AudioClip clip)
@@ -128,8 +137,9 @@ public class GameManagerKanaQuiz : MonoBehaviour
         seSource.PlayOneShot(clip);
     }
 
-    // -------- タイマー --------
-
+    // =======================
+    // タイマー
+    // =======================
     void TimerTextUpdate()
     {
         if (timerText == null) return;
@@ -157,8 +167,9 @@ public class GameManagerKanaQuiz : MonoBehaviour
         lastShownSecond = sec;
     }
 
-    // -------- ゲーム進行 --------
-
+    // =======================
+    // ゲーム進行
+    // =======================
     void NextQuestion()
     {
         if (dimPanel != null) dimPanel.SetActive(false);
@@ -171,13 +182,15 @@ public class GameManagerKanaQuiz : MonoBehaviour
         if (resultText != null) resultText.text = "";
 
         charIndex = 0;
-
         timeLeft = timeLimit;
         lastShownSecond = -1;
-        if (timerText != null) timerText.rectTransform.localScale = timerDefaultScale;
-        TimerTextUpdate();
 
+        if (timerText != null)
+            timerText.rectTransform.localScale = timerDefaultScale;
+
+        TimerTextUpdate();
         isQuestionActive = true;
+
         SetupChoices();
     }
 
@@ -207,27 +220,21 @@ public class GameManagerKanaQuiz : MonoBehaviour
             if (!choices.Contains(r)) choices.Add(r);
         }
 
-        // シャッフル
         for (int i = 0; i < choices.Count; i++)
         {
             int r = Random.Range(i, choices.Count);
             (choices[i], choices[r]) = (choices[r], choices[i]);
         }
 
-        // ボタンへ反映
         for (int i = 0; i < 4; i++)
         {
             string c = choices[i];
-
             var tmp = choiceButtons[i].GetComponentInChildren<TextMeshProUGUI>();
             if (tmp != null) tmp.text = c;
 
             choiceButtons[i].onClick.RemoveAllListeners();
-
-            // どのボタンでも「押したSE」を鳴らす
             choiceButtons[i].onClick.AddListener(() => PlaySE(buttonSE));
 
-            // 正誤判定
             if (c == correctChar)
                 choiceButtons[i].onClick.AddListener(CorrectChar);
             else
@@ -269,7 +276,7 @@ public class GameManagerKanaQuiz : MonoBehaviour
         if (!isQuestionActive) return;
 
         if (resultText != null) resultText.text = "時間切れ…";
-        PlaySE(wrongSE); // 時間切れは不正解SEにしてる（別にしたければ別Clipを用意してOK）
+        PlaySE(wrongSE);
         ShowPopup(questions[currentQuestionIndex], false);
     }
 
@@ -293,5 +300,20 @@ public class GameManagerKanaQuiz : MonoBehaviour
     void BackToReadyScene()
     {
         SceneManager.LoadScene("ReadyScene");
+    }
+
+    // =======================
+    // ボタン制御
+    // =======================
+    void DisableButtons()
+    {
+        foreach (var btn in choiceButtons)
+            btn.interactable = false;
+    }
+
+    void EnableButtons()
+    {
+        foreach (var btn in choiceButtons)
+            btn.interactable = true;
     }
 }
