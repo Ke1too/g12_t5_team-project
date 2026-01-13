@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ae236cdb08cf0fa4b8abde0c3619dcd5
+guid: d5a102f7a7134cb47a94614b8706b3ef
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6429611846798945916
-    second: omatsuri_kantou_chouchin_0
+      213: -8269930228455217433
+    second: omatsuri_kantou_chouchin (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: omatsuri_kantou_chouchin_0
+      name: omatsuri_kantou_chouchin (1)_0
       rect:
         serializedVersion: 2
-        x: 69
-        y: 0
-        width: 185
-        height: 324
+        x: 130
+        y: 15
+        width: 243
+        height: 251
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 481d7e3471e65c6a0800000000000000
-      internalID: -6429611846798945916
+      spriteID: 7e669afe54e4b3d80800000000000000
+      internalID: -8269930228455217433
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      omatsuri_kantou_chouchin_0: -6429611846798945916
+      omatsuri_kantou_chouchin (1)_0: -8269930228455217433
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

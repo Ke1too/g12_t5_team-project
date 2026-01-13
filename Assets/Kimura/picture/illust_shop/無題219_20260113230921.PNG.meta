@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 187d699919645ff4bb392162901592a8
+guid: 503564e5b7bbec646ae9097539712413
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6335388760411523389
-    second: shoes_zouri_waraji_setta_0
+      213: 1196868145954843650
+    second: "\u7121\u984C219_20260113230921_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shoes_zouri_waraji_setta_0
+      name: "\u7121\u984C219_20260113230921_0"
       rect:
         serializedVersion: 2
-        x: 5
-        y: 7
-        width: 283
-        height: 164
+        x: 164
+        y: 23
+        width: 223
+        height: 230
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c63bad1d7d2418a0800000000000000
-      internalID: -6335388760411523389
+      spriteID: 20c6e9acc312c9010800000000000000
+      internalID: 1196868145954843650
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      shoes_zouri_waraji_setta_0: -6335388760411523389
+      "\u7121\u984C219_20260113230921_0": 1196868145954843650
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
