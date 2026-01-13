@@ -8,6 +8,7 @@ public class StartButton : MonoBehaviour
     public TextMeshProUGUI startText;
     public float scaleSpeed = 1.5f;
     public float scaleAmount = 0.05f;
+    [SerializeField] private string nextSceneName;
 
     Vector3 baseScale;
 
@@ -25,7 +26,7 @@ public class StartButton : MonoBehaviour
 
         if (Keyboard.current != null && Keyboard.current.enterKey.wasPressedThisFrame)
         {
-            SceneManager.LoadScene("StageSelectScene");
+            SceneManager.LoadScene(nextSceneName);
         }
     }
 }

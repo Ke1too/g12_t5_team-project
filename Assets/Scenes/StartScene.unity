@@ -530,7 +530,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -721,6 +721,7 @@ MonoBehaviour:
   startText: {fileID: 243691374}
   scaleSpeed: 1.5
   scaleAmount: 0.05
+  nextSceneName: Authentication
 --- !u!1 &748510467
 GameObject:
   m_ObjectHideFlags: 0

@@ -63,7 +63,7 @@ Material:
     - _GlowOffset: 0
     - _GlowOuter: 0.05
     - _GlowPower: 0.75
-    - _GradientScale: 10
+    - _GradientScale: 5
     - _LightAngle: 3.1416
     - _MaskSoftnessX: 0
     - _MaskSoftnessY: 0
@@ -172,24 +172,24 @@ MonoBehaviour:
     m_FaceIndex: 0
     m_FamilyName: TamanegiKaisho v1.06
     m_StyleName: Regular
-    m_PointSize: 90
+    m_PointSize: 40
     m_Scale: 1
     m_UnitsPerEM: 1024
-    m_LineHeight: 90
-    m_AscentLine: 77.34375
-    m_CapLine: 82
-    m_MeanLine: 48
+    m_LineHeight: 40
+    m_AscentLine: 34.375
+    m_CapLine: 36
+    m_MeanLine: 22
     m_Baseline: 0
-    m_DescentLine: -12.65625
-    m_SuperscriptOffset: 77.34375
+    m_DescentLine: -5.625
+    m_SuperscriptOffset: 34.375
     m_SuperscriptSize: 0.5
-    m_SubscriptOffset: -12.65625
+    m_SubscriptOffset: -5.625
     m_SubscriptSize: 0.5
-    m_UnderlineOffset: -10.546875
-    m_UnderlineThickness: 4.21875
-    m_StrikethroughOffset: 19.2
-    m_StrikethroughThickness: 4.21875
-    m_TabWidth: 45
+    m_UnderlineOffset: -4.6875
+    m_UnderlineThickness: 1.875
+    m_StrikethroughOffset: 8.8
+    m_StrikethroughThickness: 1.875
+    m_TabWidth: 20
   m_Material: {fileID: -5542896473334528957}
   m_SourceFontFileGUID: 48b5500880c5612459433046abe435c7
   m_CreationSettings:
@@ -197,8 +197,8 @@ MonoBehaviour:
     sourceFontFileGUID: 48b5500880c5612459433046abe435c7
     faceIndex: 0
     pointSizeSamplingMode: 0
-    pointSize: 90
-    padding: 9
+    pointSize: 40
+    padding: 4
     paddingMode: 2
     packingMode: 0
     atlasWidth: 1024
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_ClearDynamicDataOnBuild: 1
   m_AtlasWidth: 1024
   m_AtlasHeight: 1024
-  m_AtlasPadding: 9
+  m_AtlasPadding: 4
   m_AtlasRenderMode: 4165
   m_UsedGlyphRects: []
   m_FreeGlyphRects:
