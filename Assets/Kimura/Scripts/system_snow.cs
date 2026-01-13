@@ -1,36 +1,60 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class System_snow : MonoBehaviour
 {
-    [SerializeField]
-    public Image gaugeSlider;
+    [Header("ゲージ")]
+    [SerializeField] Image gaugeSlider;
+
+    [Header("タイマー（時間切れ判定用）")]
     public Timer timer;
+
     int maxCount = 15;
     int currentCount = 0;
+    bool isFinished = false;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        gaugeSlider.fillAmount = 1f;
+        if (gaugeSlider != null)
+            gaugeSlider.fillAmount = 1f;
     }
 
-
+    // ボタンを押した時に呼ばれる
     public void OnButtonClik()
     {
-        if (currentCount >= maxCount) return;
+        if (isFinished) return;
 
         currentCount++;
-        gaugeSlider.fillAmount =1f- (float)currentCount/maxCount;
+        if (gaugeSlider != null)
+            gaugeSlider.fillAmount = 1f - (float)currentCount / maxCount;
+
         if (currentCount >= maxCount)
         {
             GameClear();
         }
     }
-   void GameClear()
+
+    // -------- クリア --------
+    void GameClear()
     {
-        timer.GameClear();
+        if (isFinished) return;
+        isFinished = true;
+
+        // ★ 共通フローに報告
+        GameFlowState.hasLastResult = true;
+        GameFlowState.lastWin = true;
+        GameFlowManager.Instance.ReportClear();
+    }
+
+    // -------- 失敗（時間切れなど）--------
+    public void GameFail()
+    {
+        if (isFinished) return;
+        isFinished = true;
+
+        // ★ 共通フローに報告
+        GameFlowState.hasLastResult = true;
+        GameFlowState.lastWin = false;
+        GameFlowManager.Instance.ReportFail();
     }
 }

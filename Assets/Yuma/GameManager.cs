@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -12,20 +11,22 @@ public class GameManager2 : MonoBehaviour
     [Header("UI Settings")]
     public GameObject gameClearText;
     public GameObject gameOverText;
-    public GameObject instructionUI; // w—ßUIiflamej
-    public TextMeshProUGUI countdownText; // š’Ç‰ÁFƒJƒEƒ“ƒgƒ_ƒEƒ“•\¦—p‚ÌƒeƒLƒXƒg
+    public GameObject instructionUI;
+    public TextMeshProUGUI countdownText;
 
     [Header("Game Settings")]
-    public int waitTime = 3; // š float‚©‚çint‚É•ÏXi3, 2, 1‚Æ”‚¦‚é‚½‚ßj
+    public int waitTime = 3;
 
-    private void Start()
+    private bool isFinished = false; // â˜… è¿½åŠ ï¼šå¤šé‡å‘¼ã³å‡ºã—é˜²æ­¢
+
+    void Start()
     {
         gameClearText.SetActive(false);
         gameOverText.SetActive(false);
         instructionUI.SetActive(true);
 
-        // ƒJƒEƒ“ƒgƒ_ƒEƒ“ƒeƒLƒXƒg‚Ì‰Šú‰»i‹ó‚É‚·‚é‚©AÅ‰‚Ì”š‚ğ“ü‚ê‚éj
-        if (countdownText != null) countdownText.text = waitTime.ToString();
+        if (countdownText != null)
+            countdownText.text = waitTime.ToString();
 
         isGameActive = false;
         StartCoroutine(GameStartRoutine());
@@ -38,37 +39,54 @@ public class GameManager2 : MonoBehaviour
         while (currentCount > 0)
         {
             if (countdownText != null)
-            {
-                countdownText.text = currentCount.ToString(); // ”š‚ğXV
-            }
+                countdownText.text = currentCount.ToString();
 
-            yield return new WaitForSeconds(1.0f); // 1•b‘Ò‚Â
+            yield return new WaitForSeconds(1.0f);
             currentCount--;
         }
 
-        // ÅŒã‚ÉuƒXƒ^[ƒgIv‚Æo‚·ê‡‚Í‚±‚±‚É’Ç‰Ái”CˆÓj
-        if (countdownText != null) countdownText.text = "n‚ß!!";
-        yield return new WaitForSeconds(0.5f); // START!‚ğ­‚µ‚¾‚¯Œ©‚¹‚é
+        if (countdownText != null)
+            countdownText.text = "é–‹å§‹!!";
 
-        if (countdownText != null) countdownText.gameObject.SetActive(false); // ƒeƒLƒXƒg‚ğÁ‚·
-        instructionUI.SetActive(false); // w—ßUI‚ğÁ‚·
+        yield return new WaitForSeconds(0.5f);
+
+        if (countdownText != null)
+            countdownText.gameObject.SetActive(false);
+
+        instructionUI.SetActive(false);
         isGameActive = true;
     }
 
-    private void Update()
+    void Update()
     {
-        if (!isGameActive) return;
+        if (!isGameActive || isFinished) return;
 
+        // -------- ã‚¯ãƒªã‚¢ --------
         if (gameClear)
         {
-            gameClearText.SetActive(true);
+            isFinished = true;
             isGameActive = false;
+
+            gameClearText.SetActive(true);
+
+            // â˜… å…±é€šãƒ•ãƒ­ãƒ¼ã¸å ±å‘Š
+            GameFlowState.hasLastResult = true;
+            GameFlowState.lastWin = true;
+            GameFlowManager.Instance.ReportClear();
         }
 
+        // -------- ã‚²ãƒ¼ãƒ ã‚ªãƒ¼ãƒãƒ¼ --------
         if (gameOver)
         {
-            gameOverText.SetActive(true);
+            isFinished = true;
             isGameActive = false;
+
+            gameOverText.SetActive(true);
+
+            // â˜… å…±é€šãƒ•ãƒ­ãƒ¼ã¸å ±å‘Š
+            GameFlowState.hasLastResult = true;
+            GameFlowState.lastWin = false;
+            GameFlowManager.Instance.ReportFail();
         }
     }
 }

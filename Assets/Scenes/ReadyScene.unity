@@ -916,6 +916,8 @@ MonoBehaviour:
   - SnowDome
   - Warazi
   - kanjidego tohoku
+  - MainGame
+  - MainGame2
 --- !u!82 &1823842404
 AudioSource:
   m_ObjectHideFlags: 0
