@@ -12,6 +12,7 @@ public class Timer_reverse : MonoBehaviour
     public TMP_Text GameOverText;
     float limitTime = 3; // êßå¿éûä‘
     bool isGameOver = false;
+    bool isRunning = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class Timer_reverse : MonoBehaviour
     void Update()
     {
         if (isGameOver) return;
+        if (!isRunning) return;
         limitTime -= Time.deltaTime;
 
         if (limitTime < 0)
@@ -33,6 +35,10 @@ public class Timer_reverse : MonoBehaviour
         }
 
         TimerText.text = limitTime.ToString("F0");
+    }
+    public void GameStart()
+    {
+        isRunning = true;
     }
 
     public void GameOver()
