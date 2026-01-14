@@ -1341,8 +1341,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2630749787523815703, guid: b9088b06809c0f1499d94da190923de4, type: 3}
-      propertyPath: maxClears
+      propertyPath: maxFails
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630749787523815703, guid: b9088b06809c0f1499d94da190923de4, type: 3}
+      propertyPath: maxClears
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2630749787523815703, guid: b9088b06809c0f1499d94da190923de4, type: 3}
       propertyPath: nextButton
