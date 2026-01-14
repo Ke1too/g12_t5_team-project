@@ -1635,7 +1635,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -1010, y: -10}
-  m_SizeDelta: {x: 240, y: 260}
+  m_SizeDelta: {x: 1020, y: 1080}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!95 &1823842400
 Animator:
@@ -1717,6 +1717,7 @@ MonoBehaviour:
   - MainGame
   - MainGame2
   - Akabeko
+  - CoseImaeSystem
 --- !u!82 &1823842404
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1867,7 +1868,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 1010, y: -10}
-  m_SizeDelta: {x: 240, y: 260}
+  m_SizeDelta: {x: 1020, y: 1080}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!95 &1827488983
 Animator:
